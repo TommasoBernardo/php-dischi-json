@@ -2,14 +2,14 @@ const { createApp } = Vue;
 
 createApp({
     data() {
-      return {
-        apiAddr : './server.php',
-        discList : [],
-        activeCard : 0
-      }
+        return {
+            apiAddr: './server.php',
+            discList: [],
+            activeCard: 0
+        }
     },
     methods: {
-        getData(){
+        getData() {
             axios.get(this.apiAddr)
                 .then((response) => {
                     console.log(response.data);
@@ -19,7 +19,7 @@ createApp({
                     console.error(error);
                 })
         },
-        setActiveCard(i){
+        setActiveCard(i) {
             this.activeCard = i;
         }
     },
